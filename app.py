@@ -17,7 +17,7 @@ def results():
     title = request.form["moviesearch"]
     r = requests.get('http://www.omdbapi.com/?apikey='+api_key+'&s='+title)
     movieList= r.json()['Search']
-    return render_template('results.html',movieList=movieList)
+    return render_template('grid.html',movieList=movieList)
 
-#if __name__ == '__main__':
-#    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
