@@ -1,13 +1,13 @@
 # Movie Search app using OMDB API
-A simple movie search application. 
-This application searches for movies, tv shows based on a query string and displays the result as a set of cards. 
-These cards act as a hyperlink to the IMDB url of the particular movie.
+- A simple movie search application. 
+- This application searches for movies, tv shows based on a query string and displays the result as a set of cards. 
+- These cards act as a hyperlink to the IMDB url of the particular movie.
 
 # Application tech stack
 
-Client End : HTML, CSS, Bootstrap
-Application Server : Flask
-Data source : Fetch data from from OMDB API
+- Client End : HTML, CSS, Bootstrap
+- Application Server : Flask
+- Data source : Fetch data from from OMDB API
 
 # Instructions After Downloading This Repo
 
