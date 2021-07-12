@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+
+<head>
+    <!-- Basic need -->
+    <title>Open Pediatrics</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="profile" href="#">
+
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+    <!-- Mobile specific meta -->
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone-no">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="/static/css/plugins.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+    <!-- BEGIN | Header -->
+    <header class="ht-header">
+        <div class="container">
+            <nav class="navbar navbar-default navbar-custom">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header logo">
+                    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <div id="nav-icon1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                        <img class="logo" src="/static/images/logo_icon.png" alt="" width="50" height="25">
+                </div>
+            </nav>
+
+            <!-- top search form -->
+            <form class="top-search" action="/results" method="POST">
+                <input type="text" name="moviesearch" placeholder="Search for a movie">
+            </form>
+        </div>
+    </header>
+    <!-- END | Header -->
+
+    <div class="slider movie-items">
+            <div class="container">
+                <div class="row">
+                    <div  class="slick-multiItemSlider">
+                        {% for column in movieList %}
+                        <div class="movie-item">
+                            <div class="mv-img">
+                                <a href="#"><img src="{{column.Poster}}" alt="" width="285" height="437"></a>
+                            </div>
+                            <div class="title-in">
+                                <div class="cate">
+                                    <span class="blue"><a href="#">{{column.Type}}</a></span>
+                                </div>
+                                <h6><a href="https://www.imdb.com/title/{{column.imdbID}}" target="_blank">{{column.Title}}</a></h6>
+                                <p><span>7.4</span> /10</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/plugins.js"></script>
+    <script src="/static/js/plugins2.js"></script>
+    <script src="/static/js/custom.js"></script>
+
+</body>
+
+
+</html>
